@@ -1,42 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .output {
   height: 50px;
   background-color: #282c34;
@@ -50,6 +11,7 @@
   position: relative;
   bottom: 10px;
   font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .input {
@@ -66,6 +28,7 @@
   position: relative;
   bottom: 10px;
   font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .frame {
@@ -99,27 +62,28 @@ h2 {
   color: #ffe600;
   position: relative;
   bottom: 8px;
+  font-family: "Courier New", Courier, monospace;
 }
 button {
-  width: 40px;
+  width: 42px;
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
 .buttonCol1 {
   float: left;
   width: 50%;
   padding-left: 15px;
-  padding-top: 3px;
 }
 .buttonCol2 {
   float: right;
   width: 50%;
   position: relative;
-  bottom: 84px;
-  left: 15px;
+  bottom: 87px;
+  left: 12px;
 }
 .space {
   position: relative;
-  left: 40px;
+  left: 42px;
 }
 body {
   background-color: cornsilk;
