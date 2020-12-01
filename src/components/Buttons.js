@@ -36,9 +36,13 @@ const Buttons = (props) => {
           <button value="9" onClick={props.inputTextHandler}>
             9
           </button>
-          <br />
+        </div>
+        <div className="buttonRow space">
           <button value="0" id="space" onClick={props.inputTextHandler}>
             0
+          </button>
+          <button value="," onClick={props.inputTextHandler}>
+            ,
           </button>
         </div>
       </div>
@@ -72,8 +76,8 @@ const Buttons = (props) => {
           <button value=")" onClick={props.inputTextHandler}>
             )
           </button>
-          <button value="^" onClick={props.inputTextHandler}>
-            ^
+          <button value="Math.pow(" onClick={props.inputTextHandler}>
+            exp
           </button>
           <div className="buttonRow">
             <button value="del" onClick={props.inputTextHandler}>

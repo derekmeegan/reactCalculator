@@ -84,7 +84,7 @@
   padding-bottom: 11px;
 }
 .item {
-  border: 3px solid black;
+  border: 5px solid black;
   height: 355px;
   width: 315px;
   margin: 0 auto;
@@ -94,7 +94,7 @@
   border-radius: 25px;
 }
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   color: #ffe600;
   position: relative;
@@ -108,7 +108,7 @@ button {
   float: left;
   width: 50%;
   padding-left: 15px;
-  padding-top: 5px;
+  padding-top: 3px;
 }
 .buttonCol2 {
   float: right;
@@ -117,7 +117,7 @@ button {
   bottom: 84px;
   left: 15px;
 }
-#space {
+.space {
   position: relative;
   left: 40px;
 }
