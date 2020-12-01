@@ -8,6 +8,8 @@ const Frame = (props) => {
       props.reset();
     } else if (e.target.value === "del") {
       props.setInput([...props.input].slice(0, -1));
+    } else if (e.target.value === "ans") {
+      props.setInput([...props.input].concat(props.ans));
     } else if (props.calc === true) {
       props.calcy();
       props.setInput([...props.input].concat(e.target.value));
@@ -17,6 +19,7 @@ const Frame = (props) => {
   };
   const outputHandler = () => {
     let input = props.input.join("");
+    props.setAns(eval(input).toString());
     props.setOutput(`${input} = ${eval(input).toString()}`);
     props.calcy();
   };

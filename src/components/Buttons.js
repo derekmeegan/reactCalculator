@@ -38,7 +38,10 @@ const Buttons = ({ inputHandler, outputHandler }) => {
           </button>
         </div>
         <div className="buttonRow space">
-          <button value="0" id="space" onClick={inputHandler}>
+          <button value="." onClick={inputHandler}>
+            .
+          </button>
+          <button value="0" onClick={inputHandler}>
             0
           </button>
           <button value="," onClick={inputHandler}>
@@ -48,11 +51,11 @@ const Buttons = ({ inputHandler, outputHandler }) => {
       </div>
       <div className="buttonCol2">
         <div className="buttonRow">
-          <button value="Math.sqrt" onClick={inputHandler}>
-            sqrt
+          <button value="ans" onClick={inputHandler}>
+            ans
           </button>
-          <button value="1/" onClick={inputHandler}>
-            1/x
+          <button value="Math.sqrt(" onClick={inputHandler}>
+            sqrt
           </button>
           <button value="+" onClick={inputHandler}>
             +

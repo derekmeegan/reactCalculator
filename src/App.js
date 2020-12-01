@@ -6,6 +6,7 @@ const App = () => {
   const [output, setOutput] = useState("");
   const [input, setInput] = useState([]);
   const [calc, setCalc] = useState(false);
+  const [ans, setAns] = useState(null);
   const reset = () => {
     setInput([]);
     setOutput("");
@@ -24,6 +25,8 @@ const App = () => {
         reset={reset}
         calc={calc}
         calcy={calcy}
+        ans={ans}
+        setAns={setAns}
       />
     </div>
   );
