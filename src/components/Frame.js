@@ -3,10 +3,9 @@ import Screen from "./Screen";
 import Buttons from "./Buttons";
 
 const Frame = (props) => {
-  const inputTextHandler = (e) => {
-    if (e.target.value === "clear") {
-      props.resetList();
-      props.resetOutput();
+  const inputHandler = (e) => {
+    if (e.target.value === "cls") {
+      props.reset();
     } else if (e.target.value === "del") {
       props.setInput([...props.input].slice(0, -1));
     } else if (props.calc === true) {
@@ -16,21 +15,16 @@ const Frame = (props) => {
       props.setInput([...props.input].concat(e.target.value));
     }
   };
-  const outputTextHandler = () => {
-    const answer = `${props.input.join("")} = ${eval(
-      props.input.join("")
-    ).toString()}`;
-    props.setOutput(answer);
+  const outputHandler = () => {
+    let input = props.input.join("");
+    props.setOutput(`${input} = ${eval(input).toString()}`);
     props.calcy();
   };
   return (
     <div className="frame">
       <h2>React Calculator</h2>
       <Screen input={props.input} output={props.output} />
-      <Buttons
-        outputTextHandler={outputTextHandler}
-        inputTextHandler={inputTextHandler}
-      />
+      <Buttons outputHandler={outputHandler} inputHandler={inputHandler} />
     </div>
   );
 };

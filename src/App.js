@@ -2,24 +2,17 @@ import "./App.css";
 import Frame from "./components/Frame";
 import { React, useState } from "react";
 
-let initialList = [];
-
-function App() {
+const App = () => {
   const [output, setOutput] = useState("");
-  const [input, setInput] = useState(initialList);
+  const [input, setInput] = useState([]);
   const [calc, setCalc] = useState(false);
-  const resetList = () => {
-    initialList = [];
-    setInput(initialList);
-  };
-  const resetOutput = () => {
+  const reset = () => {
+    setInput([]);
     setOutput("");
   };
   const calcy = () => {
     setCalc(!calc);
-    if (!calc) {
-      resetList();
-    }
+    if (!calc) setInput([]);
   };
   return (
     <div className="item">
@@ -28,14 +21,12 @@ function App() {
         setInput={setInput}
         output={output}
         setOutput={setOutput}
-        resetList={resetList}
-        resetOutput={resetOutput}
+        reset={reset}
         calc={calc}
         calcy={calcy}
-        initialList={initialList}
       />
     </div>
   );
-}
+};
 
 export default App;
