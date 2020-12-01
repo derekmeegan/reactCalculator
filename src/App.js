@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Frame from "./components/Frame";
+import { React, useState } from "react";
+
+let initialList = [];
 
 function App() {
+  const [output, setOutput] = useState("");
+  const [input, setInput] = useState(initialList);
+  const [calc, setCalc] = useState(false);
+  const resetList = () => {
+    initialList = [];
+    setInput(initialList);
+  };
+  const resetOutput = () => {
+    setOutput("");
+  };
+  const calcy = () => {
+    setCalc(!calc);
+    if (!calc) {
+      resetList();
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="item">
+      <Frame
+        input={input}
+        setInput={setInput}
+        output={output}
+        setOutput={setOutput}
+        resetList={resetList}
+        resetOutput={resetOutput}
+        calc={calc}
+        calcy={calcy}
+        initialList={initialList}
+      />
     </div>
   );
 }
